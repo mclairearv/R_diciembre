@@ -1,0 +1,42 @@
+---
+title: "Clase5_ejemplo"
+editor: visual
+format:  
+  docx: 
+    reference-doc: plantilla.docx
+---
+
+# Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+### Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+1 + 1
+
+
+```
+
+You can add options to executable code like this
+
+```{r}
+#| echo: true
+#|
+
+library(ggplot2)
+
+cars<-cars
+
+cars |> 
+  ggplot() +
+  geom_point(aes(x = speed, y = dist)) +
+  labs(x = "Velocidad (millas/h)", y = "Distancia de frenado (pies)")
+
+
+
+```
+
+The `echo: false` option disables the printing of code (only output is displayed).
